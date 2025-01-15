@@ -4,67 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sandwich Crunch - Order</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Order Now</title>
     <style>
-        /* ... (CSS from previous responses - no changes needed here) */
-        .menu-section {
-            max-width: 960px;
-            margin: 40px auto;
-            padding: 0 20px;
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent scrollbars */
         }
 
-        .menu-section h2 {
-            margin-bottom: 20px;
-            text-align: center;
+        .iframe-container {
+            width: 100%;
+            height: 100%;
         }
 
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .menu-item:last-child {
-            border-bottom: none;
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
 
 <body>
-    <nav>
-        <div class="container">
-            <a href="index.html">Home</a>
-            <a href="order.html">Order</a>
-        </div>
-    </nav>
-    <h1>Order Now</h1>
-    <div class="menu-section">
-        <h2>Sandwiches</h2>
-        <div class="menu-item">
-            <span>Chicken Salad Sandwich</span>
-            <span>$3.50</span>
-        </div>
-        <div class="menu-item">
-            <span>Tuna Salad Sandwich</span>
-            <span>$3.00</span>
-        </div>
-        <div class="menu-item">
-            <span>Egg Salad Sandwich</span>
-            <span>$2.50</span>
-        </div>
-    </div>
     <div class="iframe-container">
         <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSdvpzPHRcnhWoELRF3gzTINod1_Qlc0clBfeCxXtWFbjMpExQ/viewform?usp=sf_link"></iframe>
     </div>
-    <footer>
-        <p>&copy; 2025 Sandwich Crunch</p>
-    </footer>
 </body>
 
 </html>
