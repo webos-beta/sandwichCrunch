@@ -9,85 +9,98 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* ... (CSS from previous responses) ... */
-        .iframe-container {
-            position: fixed;
+        /* Basic Reset and Font */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+            position: sticky;
             top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1000; /* Ensure it's on top */
+            z-index: 100;
         }
 
-        .iframe-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
+        nav .container {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
         }
-        .recipe-cards{
-            margin-bottom: 50px;
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
         }
-        footer{
-            position: relative;
-            bottom: 0px;
+
+        nav a:hover {
+            color: #ff6b6b;
+        }
+
+        /* Banner */
+        .banner {
             width: 100%;
-            background-color: #333;
+            height: 400px;
+            background-image: url("https://images.unsplash.com/photo-1565958011703-44f9829ba18c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color: white;
+            text-shadow: 2px 2px 4px #000000;
             text-align: center;
-            padding: 20px 0;
         }
-        .coming-soon{
-            font-size: 20px;
-            font-weight: bold;
+
+        .banner h1 {
+            font-size: 3em;
+            margin-bottom: 1rem;
         }
-    </style>
-</head>
 
-<body>
-    <nav>
-        <div class="container">
-            <a href="index.html">Home</a>
-            <a href="order.html">Order</a>
-        </div>
-    </nav>
-    <header>
-        <div class="banner">
-            <h1>Sandwich Crunch</h1>
-            <p>Discover our mouthwatering sandwiches.</p>
-        </div>
-    </header>
-    <main>
-        <section class="recipe-cards">
-            <div class="recipe-card">
-                <img src="https://images.unsplash.com/photo-1598529245229-425d36b19901?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNoaWNrZW4lMjBzYW5kd2ljaHxlbnwwfHwwfHx8MA%3D%3D"
-                    alt="Simple Chicken Sandwich">
-                <div class="recipe-card-content">
-                    <h3>Simple Chicken Sandwich</h3>
-                    <p>Tender chicken breast, crisp lettuce, and creamy mayo on a toasted bun. A classic done right.</p>
-                </div>
-            </div>
-            <div class="recipe-card">
-                <img src="https://images.unsplash.com/photo-1547592166-234200756e87?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGdyYWZmaXRpJTIwY2hlZXNlJTIwc2FuZHdpY2h8ZW58MHx8MHx8fDA%3D"
-                    alt="Grilled Cheese Sandwich">
-                <div class="recipe-card-content">
-                    <h3>Grilled Cheese Sandwich</h3>
-                    <p>Melted cheese between perfectly toasted bread. Simple, comforting, and delicious.</p>
-                </div>
-            </div>
-            <div class="recipe-card">
-                <img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hpY2tlbiUyMGJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D"
-                    alt="Chicken Burger with Pickles and Tomato">
-                <div class="recipe-card-content">
-                    <h3>Chicken Burger with Pickles and Tomato</h3>
-                    <p>A juicy chicken patty topped with tangy pickles and fresh tomato on a soft bun.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p class = "coming-soon">More Sandwiches Coming Soon!</p>
-        <p>&copy; 2025 Sandwich Crunch</p>
-    </footer>
-</body>
+        .banner p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-</html>
+        /* Recipe Cards */
+        .recipe-cards {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 30px;
+        }
+
+        .recipe-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px
